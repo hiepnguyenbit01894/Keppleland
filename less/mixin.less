@@ -1,0 +1,77 @@
+// ==== variables ===
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #de8686;
+// ==== flex ===
+.flex-jsbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-alstart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.flex-jsaround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-jstart {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// ==== fontsize ===
+.fontLine(@fsize,@lheight) {
+  font-size: @fsize;
+  line-height: @lheight;
+}
+// === other ===
+.widthHeight(@width,@height) {
+  width: @width;
+  height: @height;
+}
+.image(@width,@height) {
+  width: @width;
+  height: @height;
+  object-fit: cover;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.container1 {
+  max-width: 800px;
+  margin: auto;
+}
+.background-red {
+  background-color: @mainColor;
+}
+.color-white {
+  color: @fontColor;
+}
+.font-roboto {
+  font-family: "roboto", sans-serif;
+}
+.title-small {
+  color: @mainColor;
+  .fontLine(16px,18px);
+}

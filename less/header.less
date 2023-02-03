@@ -1,0 +1,72 @@
+// ==== variables ===
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #de8686;
+
+// mixin
+@import "mixin.less";
+//main
+header {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  .header__size {
+    padding: 18px 0;
+    .header__main {
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+      .header__main--navigation {
+        margin: 0 40px;
+        width: 75%;
+        .form {
+          @media (max-width: 768px) {
+            margin-top: 10px;
+          }
+          max-width: 690px;
+          border: 1px solid @borderColor;
+          .flex-jsbetween;
+          border-radius: 20px;
+          input {
+            outline: none;
+            border: 0;
+            padding: 11px 0 11px 20px;
+            border-radius: inherit;
+          }
+          button {
+            .widthHeight(32px,32px);
+            border: none;
+            border-radius: 50%;
+            margin: 3px;
+            background-color: @mainColor;
+            color: @fontColor;
+          }
+        }
+        .header-main__navBar {
+          padding: 10px;
+          .fontLine(12px,14px);
+          .header-main_navBar--item {
+            padding-right: 30px;
+            :first-child {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .header-main__pay {
+        .fontLine(12px,14px);
+        text-align: center;
+        .cart {
+          padding-right: 20px;
+          .cart_name {
+            .widthHeight(56px,14px);
+          }
+        }
+        .menu {
+          .menu_name {
+            .widthHeight(56px,14px);
+          }
+        }
+      }
+    }
+  }
+}

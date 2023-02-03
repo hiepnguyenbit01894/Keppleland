@@ -1,0 +1,113 @@
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #f5f5f5;
+@backitemcolor: #fff;
+// mixin
+@import "mixin.less";
+//main
+footer {
+  .footer__size {
+    .footer__main {
+      padding: 40px 0 20px 0;
+      gap: 100px;
+      border-bottom: 1px solid @borderColor;
+      @media (max-width: 1000px) {
+        .flex-column;
+        // justify-content: center;
+        align-items: center;
+      }
+      .footer__primary {
+        .footer__primary--title {
+          .title-small;
+          .fontLine(14px,16px );
+          font-weight: 1000;
+          padding-bottom: 20px;
+        }
+        .footer__primary--para {
+          .fontLine(12px,14px);
+          line-height: 200%;
+          padding-bottom: 20px;
+        }
+        .footer__primary--contact {
+          .fontLine(12px,14px);
+          font-weight: 700;
+        }
+        .primary__list {
+          width: 60%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          .primary__list--item {
+            i {
+              transform: translateY(50%);
+            }
+            .widthHeight(35px, 35px);
+            text-align: center;
+            background-color: @mainColor;
+            border-radius: 20px;
+            color: @secondaryColor;
+          }
+        }
+      }
+      .footer-care__secondary,
+      .footer-care__primary {
+        .fontLine(12px,14px);
+        width: 30%;
+        @media (max-width: 1000px) {
+          width: 100%;
+          .flex-column;
+          justify-content: center;
+        }
+        h4 {
+          font-weight: 700;
+          padding-bottom: 20px;
+        }
+        .footer-care__primary--item,
+        .footer-care__secondary--item {
+          padding-bottom: 15px;
+        }
+      }
+      .footer-tertiary {
+        .fontLine(12px,14px);
+        .footer-tertiary__pay,
+        .footer-tertiary__ship {
+          .footer-tertiary__pay--title,
+          .footer-tertiary__ship--title {
+            padding-bottom: 20px;
+          }
+          .footer-tertiary__ship--title {
+            margin-top: 35px;
+          }
+          .footer-tertiary__pay--list,
+          .footer-tertiary__ship--list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+        }
+      }
+    }
+    .footer__note {
+      @media (max-width: 1000px) {
+        .flex-column;
+      }
+      padding: 20px 0;
+      .fontLine(10px,11px);
+      .note__list {
+        gap: 30px;
+        @media (max-width: 1000px) {
+          padding-top: 10px;
+        }
+        @media (max-width: 768px) {
+          gap: 5px;
+        }
+        :nth-child(1),
+        :nth-child(2),
+        :nth-child(3) {
+          border-right: 1px solid black;
+          padding-right: 31px;
+        }
+      }
+    }
+  }
+}

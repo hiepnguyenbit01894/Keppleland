@@ -1,0 +1,93 @@
+// ==== variables ===
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #f5f5f5;
+@backitemcolor: #fff;
+// mixin
+@import "mixin.less";
+//main
+.tradeMark {
+  background-color: @secondaryColor;
+  padding-top: 40px;
+  .tradeMark_size {
+    background-color: @backitemcolor;
+
+    .tradeMark-nav {
+      padding: 20px;
+      border-bottom: 1px solid @borderColor;
+      @media (max-width: 768px) {
+        .flex-column;
+      }
+      .tradeMark-nav__list {
+        font-weight: 1000;
+        @media (max-width: 768px) {
+          float: left;
+          padding-bottom: 10px;
+        }
+        @media (max-width: 500px) {
+          padding-bottom: 10px;
+          .flex-column;
+        }
+        .tradeMark-nav__list--primary {
+          .title-small;
+        }
+        .tradeMark-nav__list--secondary,
+        .tradeMark-nav__list--tertiary {
+          .fontLine(13px,15px);
+          .flex;
+          padding-left: 20px;
+          span {
+            padding-right: 10px;
+          }
+        }
+      }
+      .tradeMark-nav__watch {
+        .fontLine(14px,16px);
+        .watch__tile {
+          padding-right: 7px;
+        }
+      }
+    }
+    .tradeMark-main {
+      padding: 20px;
+      text-align: center;
+      @media (max-width: 1100px) {
+        .flex-column;
+      }
+      .tradeMark-main__image {
+        @media (max-width: 1100px) {
+          .widthHeight(100%,auto);
+          img {
+            .image(100%,auto);
+          }
+        }
+      }
+      .tradeMark-main__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        @media (max-width: 1200px) {
+          gap: 10px;
+        }
+        @media (max-width: 1100px) {
+          gap: 100px;
+        }
+        @media (max-width: 900px) {
+          padding-top: 20px;
+          gap: 50px;
+        }
+        @media (max-width: 700px) {
+          padding-top: 20px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+        @media (max-width: 550px) {
+          padding-top: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+    }
+  }
+}

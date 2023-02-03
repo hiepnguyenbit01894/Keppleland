@@ -1,0 +1,56 @@
+// ==== variables ===
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #f5f5f5;
+@backitemcolor: #fff;
+// mixin
+@import "mixin.less";
+//main
+.category {
+  background-color: @secondaryColor;
+  .category__size {
+    .category__title {
+      text-align: center;
+
+      font-weight: 700;
+      padding: 40px 0 20px 0;
+    }
+    .category-list {
+      background-color: @backitemcolor;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(7, 1fr);
+      }
+      @media (max-width: 800px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      @media (max-width: 600px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 400px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .category-list__item {
+        text-align: center;
+        border: 1px solid @borderColor;
+        padding: 20px;
+        .flex-column;
+        .category-list__item--image {
+          .widthHeight(70px,80px);
+          background-color: @backitemcolor;
+          .flex;
+          padding-bottom: 10px;
+        }
+        .category-list__item--name {
+          .fontLine(13px,15px);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.flex-jsbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-jsaround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-jstart {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.container1 {
+  max-width: 800px;
+  margin: auto;
+}
+.background-red {
+  background-color: #c8102e;
+}
+.color-white {
+  color: #fff;
+}
+.font-roboto {
+  font-family: "roboto", sans-serif;
+}
+.title-small {
+  color: #c8102e;
+  font-size: 16px;
+  line-height: 18px;
+}
+.personal {
+  padding-top: 40px;
+  background-color: #de8686;
+}
+.personal .personal__size {
+  background-color: #fff;
+}
+.personal .personal__size .personal__nav {
+  padding: 20px;
+}
+.personal .personal__size .personal__nav .personal-nav__title {
+  color: #c8102e;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.personal .personal__size .personal__nav .personal-nav__watch {
+  font-size: 14px;
+  line-height: 16px;
+}
+.personal .personal__size .personal__list {
+  display: grid;
+  padding: 30px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .personal .personal__size .personal__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .personal .personal__size .personal__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .personal .personal__size .personal__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .personal .personal__size .personal__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .personal .personal__size .personal__list .personal__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.personal .personal__size .personal__list .personal__item .personal__item--para {
+  padding: 20px 0 10px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.personal .personal__size .personal__list .personal__item .personal__item--price {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 1000;
+}
+.personal .personal__size .personal__list .personal__item .personal__item--discount {
+  font-size: 10px;
+  line-height: 11px;
+  padding: 4px 5px;
+  background-color: #c8102e;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 20px;
+  font-weight: 1000;
+}
+.personal .personal__size .personal__list .personal__item .personal__item--salePrice {
+  padding-top: 5px;
+  font-size: 10px;
+  line-height: 12px;
+}
+.personal .more {
+  text-align: center;
+  padding: 20px 0 60px 0;
+}
+.personal .more button {
+  padding: 12px 88px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}

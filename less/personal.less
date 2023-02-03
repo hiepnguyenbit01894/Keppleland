@@ -1,0 +1,80 @@
+// ==== variables ===
+@mainColor: #c8102e;
+@borderColor: #d9d9d9;
+@fontColor: #fff;
+@secondaryColor: #f5f5f5;
+@backitemcolor: #fff;
+// mixin
+@import "mixin.less";
+//main
+.personal {
+  padding-top: 40px;
+  background-color: @secondaryColor;
+  .personal__size {
+    background-color: @backitemcolor;
+    .personal__nav {
+      padding: 20px;
+      .personal-nav__title {
+        .title-small;
+        font-weight: 700;
+      }
+      .personal-nav__watch {
+        .fontLine(14px,16px);
+      }
+    }
+    .personal__list {
+      display: grid;
+      padding: 30px;
+      grid-template-columns: repeat(5, 1fr);
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      gap: 20px;
+      .personal__item {
+        @media (max-width: 500px) {
+          .flex-column;
+        }
+        .personal__item--para {
+          padding: 20px 0 10px 0;
+          .fontLine(14px,16px);
+          font-weight: 700;
+        }
+        .personal__item--price {
+          .fontLine(16px,18px);
+          font-weight: 1000;
+        }
+        .personal__item--discount {
+          .fontLine(10px,11px);
+          padding: 4px 5px;
+          background-color: @mainColor;
+          color: @fontColor;
+          margin-left: 10px;
+          border-radius: 20px;
+          font-weight: 1000;
+        }
+        .personal__item--salePrice {
+          padding-top: 5px;
+          .fontLine(10px,12px);
+        }
+      }
+    }
+  }
+  .more {
+    text-align: center;
+    padding: 20px 0 60px 0;
+    button {
+      padding: 12px 88px;
+      background-color: @backitemcolor;
+      border: 1px solid #d9d9d9;
+    }
+  }
+}

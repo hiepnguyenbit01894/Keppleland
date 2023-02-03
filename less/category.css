@@ -1,0 +1,107 @@
+.flex-jsbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-jsaround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-jstart {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.container1 {
+  max-width: 800px;
+  margin: auto;
+}
+.background-red {
+  background-color: #c8102e;
+}
+.color-white {
+  color: #fff;
+}
+.font-roboto {
+  font-family: "roboto", sans-serif;
+}
+.category {
+  background-color: #de8686;
+}
+.category .category__size .category__title {
+  text-align: center;
+  font-weight: 700;
+  padding: 40px 0 20px 0;
+}
+.category .category__size .category-list {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+@media (max-width: 1200px) {
+  .category .category__size .category-list {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .category .category__size .category-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .category .category__size .category-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .category .category__size .category-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .category .category__size .category-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.category .category__size .category-list .category-list__item {
+  text-align: center;
+  border: 1px solid #d9d9d9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category .category__size .category-list .category-list__item .category-list__item--image {
+  width: 70px;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.category .category__size .category-list .category-list__item .category-list__item--name {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+}

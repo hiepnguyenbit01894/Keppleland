@@ -1,0 +1,62 @@
+.flex-jsbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-jsaround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.container1 {
+  width: 800px;
+  margin: auto;
+}
+.background-red {
+  background-color: #c8102e;
+}
+.color-white {
+  color: #fff;
+}
+.font-roboto {
+  font-family: "roboto", sans-serif;
+}
+.navBar__background .navBar {
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+.navBar__background .navBar .navBar__primary .navBar__primary--title {
+  padding-right: 15px;
+}
+.navBar__background .navBar .navBar__primary .fa-facebook {
+  padding-right: 10px;
+}
+.navBar__background .navBar .navBar__secondary .system {
+  padding-right: 20px;
+}
+.navBar__background .navBar .navBar__secondary .system .system__title {
+  padding-right: 5px;
+}
+.navBar__background .navBar .navBar__secondary .language .language__title {
+  padding-right: 7px;
+}
